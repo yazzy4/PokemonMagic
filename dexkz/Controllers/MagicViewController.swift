@@ -10,6 +10,8 @@ import UIKit
 
 class MagicViewController: UIViewController {
 
+    @IBOutlet weak var magicCollection: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

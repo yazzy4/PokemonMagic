@@ -10,4 +10,6 @@ import UIKit
 
 class MagicViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var magicCardLoadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var magicCardImg: UIImageView!
 }

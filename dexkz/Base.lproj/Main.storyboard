@@ -64,6 +64,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pokemon" selectedImage="EggPokemon" id="RTt-u5-k4J"/>
+                    <connections>
+                        <outlet property="pokemonCollectionView" destination="GIX-Dq-ZZl" id="nQq-Dt-I1a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,7 +100,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MagicCell" id="OPA-ys-HAg">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokemonDetailedCell" id="OPA-ys-HAg" customClass="PokemonDetailedCell" customModule="dexkz" customModuleProvider="target">
                                                 <rect key="frame" x="-15" y="0.0" width="240" height="135"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -137,6 +140,11 @@
                                                     <constraint firstAttribute="trailingMargin" secondItem="vbs-5W-tWa" secondAttribute="trailing" constant="10" id="fCn-4E-hqd"/>
                                                     <constraint firstItem="gty-qP-8yE" firstAttribute="leading" secondItem="OPA-ys-HAg" secondAttribute="leading" constant="10" id="uRE-Os-bUa"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="attackDescription" destination="vbs-5W-tWa" id="fEM-W2-ftj"/>
+                                                    <outlet property="attackLevel" destination="OVN-WU-7iN" id="JNm-gl-806"/>
+                                                    <outlet property="attackName" destination="gty-qP-8yE" id="IXp-lf-LiV"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
@@ -171,6 +179,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jqh-7z-wRP"/>
                     </view>
+                    <connections>
+                        <outlet property="detailedPokemonCollectionView" destination="RZR-Hj-7mg" id="BUf-6F-FNL"/>
+                        <outlet property="pokemonButton" destination="bO4-Qn-cIt" id="A5M-kS-ouP"/>
+                        <outlet property="pokemonDetailedImage" destination="g5W-Xb-Jp9" id="DfN-Gn-AAE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0L7-GF-ukV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,6 +230,10 @@
                                             <constraint firstItem="54D-I4-Pfl" firstAttribute="centerX" secondItem="XY2-9i-pfe" secondAttribute="centerX" id="k3m-bL-aUo"/>
                                             <constraint firstItem="KkS-iQ-bvC" firstAttribute="centerX" secondItem="54D-I4-Pfl" secondAttribute="centerX" id="mBc-Bt-GFb"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="magicCardImg" destination="54D-I4-Pfl" id="c9U-rB-Bzd"/>
+                                            <outlet property="magicCardLoadingIndicator" destination="KkS-iQ-bvC" id="e9b-SK-MMs"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -235,6 +252,9 @@
                         <viewLayoutGuide key="safeArea" id="Wtg-1m-H6J"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Magic" selectedImage="Magic Icon" id="dtC-Pl-NEu"/>
+                    <connections>
+                        <outlet property="magicCollection" destination="rGU-ia-B79" id="PIe-jP-Nlj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMv-Mc-V7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,7 +282,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MagicDetailedCell" id="FL8-Fc-kcu">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MagicDetailedCell" id="FL8-Fc-kcu" customClass="MagicDetailedCollectionViewCell" customModule="dexkz" customModuleProvider="target">
                                         <rect key="frame" x="27" y="0.0" width="246" height="416"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -310,6 +330,11 @@
                                             <constraint firstItem="MU8-Do-TDT" firstAttribute="leading" secondItem="FL8-Fc-kcu" secondAttribute="leadingMargin" constant="10" id="qIP-G7-sMV"/>
                                             <constraint firstItem="W1h-3n-KYc" firstAttribute="top" secondItem="MU8-Do-TDT" secondAttribute="bottom" constant="10" id="wLi-eZ-Alp"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="language" destination="W1h-3n-KYc" id="m5M-X9-TWA"/>
+                                            <outlet property="magicCardDescription" destination="bYF-jP-fVC" id="c1T-zS-bla"/>
+                                            <outlet property="magicCardName" destination="MU8-Do-TDT" id="TcP-3Q-2vm"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -327,6 +352,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y7P-gx-bUc"/>
                     </view>
+                    <connections>
+                        <outlet property="magicButton" destination="w2Z-ho-T1a" id="jeG-TB-LdG"/>
+                        <outlet property="magicDetailedCollectionView" destination="9B8-ae-d2Y" id="c5G-0l-tkL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYl-ql-HPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

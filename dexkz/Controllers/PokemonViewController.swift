@@ -9,6 +9,9 @@
 import UIKit
 
 class PokemonViewController: UIViewController {
+    
+    @IBOutlet weak var pokemonCollectionView: UICollectionView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
