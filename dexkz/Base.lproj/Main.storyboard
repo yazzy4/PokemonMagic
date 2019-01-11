@@ -50,6 +50,9 @@
                                             <constraint firstItem="U0s-QF-0uP" firstAttribute="centerY" secondItem="K7x-hf-xNT" secondAttribute="centerY" id="nOT-Pc-cku"/>
                                             <constraint firstItem="PqW-Zf-yqK" firstAttribute="centerX" secondItem="U0s-QF-0uP" secondAttribute="centerX" id="zk2-oo-bNM"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="pokemonImage" destination="U0s-QF-0uP" id="iOc-qG-psx"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -367,6 +370,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IAE-xs-vCV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lxG-jD-FoG">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

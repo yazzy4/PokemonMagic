@@ -18,13 +18,34 @@ class PokemonDetailViewController: UIViewController {
     
     
     
+    private var pokeDetailImage = [PokemonInfo](){
+        didSet{
+            DispatchQueue.main.async {
+                self.detailedPokemonCollectionView.reloadData()
+            }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getPokemonDetailCards()
         
     }
     
-
-
-
+    
+    func getPokemonDetailCards() {
+        PokemonAPI.searchPokemon { (error, cards) in
+            if let error = error{
+                print(error)
+            } else if let cards = cards {
+                DispatchQueue.main.async {
+                    self.pokeDetailImage = cards
+                }
+            }
+        }
+    }
+    
+    
+    
 }
